@@ -10,13 +10,17 @@ pipeline {
   stages {
     stage('Clean') {
       steps {
+          sh 'ls'
           cleanWs()
+          sh 'ls'
       }
     }
 
     stage('Checkout') {
       steps {
+        sh 'ls'
         checkout scm
+        sh 'ls'
       }
     }
 
@@ -27,10 +31,10 @@ pipeline {
     }
   }
 
-   post {
+  post {
     always {
         cleanWs()
-      }
+    }
   }
 
 }
