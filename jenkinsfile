@@ -10,17 +10,17 @@ pipeline {
   stages {
     stage('Clean') {
       steps {
-          sh 'ls'
+          sh 'pwd'
           cleanWs()
-          sh 'ls'
+          sh 'pwd'
       }
     }
 
     stage('Checkout') {
       steps {
-        sh 'ls'
+        sh 'pwd'
         checkout scm
-        sh 'ls'
+        sh 'pwd'
       }
     }
 
