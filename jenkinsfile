@@ -33,7 +33,7 @@ pipeline {
 
   post {
     always {
-      cleanWs()
+      cleanWs(patterns: [[pattern: '.py', type: 'EXCLUDE']])
     }
   }
 }
