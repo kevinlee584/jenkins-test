@@ -33,8 +33,9 @@ pipeline {
 
   post {
     always {
-      deleteDirs: true,
-      cleanWs(patterns: [[pattern: '*.py', type: 'EXCLUDE']])
+      
+      cleanWs(deleteDirs: true, 
+        patterns: [[pattern: '*.py', type: 'EXCLUDE']])
     }
   }
 }
